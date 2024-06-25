@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[43]:
+# In[46]:
 
 
 #The fee structure should be determined for bill payment transactions.
@@ -65,9 +65,19 @@ def calculate_fee_rate(transaction_amount):
 
 # start of example usage:
 
-transaction_amount = 5000000  # example transaction value
+# Example usage:
 
-calculated_fee = calculate_fee_rate(transaction_amount)
+# Prompt user for input
+user_input = input("Please enter the transaction amount: ")
+
+try:
+    transaction_amount = float(user_input)
+    
+    calculated_fee = calculate_fee_rate(transaction_amount)
+    
+except ValueError:
+    
+    print("Invalid input. Please enter a numeric value.")
 
 # end of example usage
 
